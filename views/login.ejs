@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('head'); %>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/form.css" />
+    <title>Login</title>
+</head>
+
+<body>
+    <%- include('navform'); %>
+        <div id="logindiv">
+            <img class="profile-pic circular--square" src="/img/logo.jpg" />
+            <div id="form">
+
+                <form method="POST" id="login" action='/selectLogin'>
+                    <input type="text" name="username" id="username" placeholder="Username">
+                    <hr>
+                    <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+
+            <button class="enter" type="submit" id="lsubmit"> Login </button>
+            </form>
+        </div>
+        <div id="comboard">
+        <h1>Community Board</h1>
+        <br>
+        <p> a social network dedicated to bring together people living close to each other
+             with the creation of communities, allowing users to form groups, to ask for help and to participate in events. </p>
+        </div>
+
+
+        <script src="/js/login.js"></script>
+</body>
+
+</html>

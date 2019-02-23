@@ -1,0 +1,37 @@
+<div id="navbar">
+    <ul>
+        <li>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Communities</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <% for (let i = 0; i < communityList.length; i++) { %>
+                        <a href="/feed/<%- communityList[i].id %>">
+                            <%- communityList[i].name %>
+                        </a>
+                        <% } %>
+                            <a href="/createCommunity">Create Community</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="/todo">To-do List</a>
+        </li>
+        <li>
+            <a id="profile" href="/profile">Profile<span v-if="notifs != 0" id="notifs">{{notifs}}</span></a>
+        </li>
+        <div id="namebar">
+        <img class="profile-picnav circular--square" src="/img/logo.jpg" />
+        <p>Community Board</p>
+        </div>
+        <div id="searchwrap">
+        <li id="searchbar">
+            <input class="form-control autocomplete" id="communities" name="key" type="text" placeholder='Search a Community by name or address'
+            />
+        </li>
+        </div>
+        <li style="float:right">
+            <a href="/logout">Logout</a>
+        </li>
+    </ul>
+</div>
+<button id="sumb">0</button>

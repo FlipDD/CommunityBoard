@@ -1,0 +1,219 @@
+body{
+    margin: 0;
+    width: 100vw;
+    max-width:100%;
+    background-repeat: no-repeat;
+    background: linear-gradient(to top, rgb(0, 53, 226),rgb(1, 200, 235));
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#notifs{
+  margin-left: 0.5vw;
+  background-color: orange;
+  color: #333;
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  text-align: center;
+  width: 1.6em;
+}
+
+#navbar {
+  display: inline-block;
+  position: relative;
+}
+
+#navbar ul {
+    z-index: 3;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    max-height: 7.5vh;
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+#navbar ul li {
+    float: left;
+}
+
+#navbar ul li a {
+  border-left: 2px solid orange;
+  min-height: 7.5vh;
+}
+#navbar ul li a#profile {
+  border-right: 2px solid orange;
+}
+
+#navbar li a , .dropbtn{
+    background-color: #333;
+    display: block;
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 2vh 2vw;
+    text-decoration: none;
+}
+
+#navbar  li a:hover{
+    background-color: #ffa318;
+}
+
+div#namebar {
+  max-width: 20vw;
+  max-height: 7vh;
+}
+
+.profile-picnav{
+  position: fixed;
+  left: 39.7vw;
+  width: 3.5vw;
+  height: 3.5vw;
+}
+
+div#namebar p{
+  position: fixed;
+  top: 1vh;
+  right: 42vw;
+  font-size: 26px;
+  font-weight: 500;
+  color: whitesmoke;
+  max-height: 7vh;
+  z-index: 100;
+}
+
+
+.dropbtn {
+  min-height: 7.5vh;
+}
+
+a.active {
+    background-color: #ffa318;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #ffa318;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 15vh;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 1vh 1vw;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd}
+
+.show {display:block;}
+
+.right{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.left{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.circular--square {
+    border-radius: 50%;
+  }
+
+/* search bar */
+#searchwrap {
+  max-height: 7vh;
+}
+#searchbar {
+  position: fixed;
+  display: block;
+    width: 22vw;
+    padding: 1vh 0;
+    right: 10vw;
+}
+.algolia-autocomplete {
+    width: 100%;
+  }
+  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+    width: 100%;
+  }
+  .algolia-autocomplete .aa-hint {
+    color: #999;
+  }
+  .algolia-autocomplete .aa-dropdown-menu {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-top: none;
+  }
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+    cursor: pointer;
+    padding: 5px 4px;
+  }
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+    background-color: #B2D7FF;
+  }
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  /* ------------------------ SCROLL BAR SETUP ------------------------------------ */
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff8000;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: #ff8000;
+  }
+  ::-webkit-scrollbar-track {
+    background: #666666;
+    border: 0px none #ffffff;
+    border-radius: 100px;
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: #ffffff;
+  }
+  ::-webkit-scrollbar-track:active {
+    background: #1762b5;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }

@@ -1,0 +1,397 @@
+#sidebar{
+  background-color: rgb(29, 29, 29);
+  color: white;
+  min-height: 93vh;
+  max-height: 93vh;
+  width: 18vw;
+  padding: 0;
+  margin: 0;
+  align-content: center;
+  justify-content: center;
+}
+
+#sidebar a{
+  text-decoration: none;
+}
+
+button#submit {
+  margin: 2vh 0;
+}
+
+#feed{
+  overflow-y: scroll;
+  width: 100%;
+  min-width: 82vw;
+  max-width: 82vw;
+  justify-content: center;
+  color: black;
+  bottom: 0;
+  min-height: 93vh;
+  max-height: 93vh;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to top, rgb(0, 53, 226),rgb(1, 200, 235));
+
+}
+
+#request{
+  overflow-y: scroll;
+  min-width: 82vw;
+  max-width: 82vw;
+  justify-content: center;
+  background-color: #696868;
+  color: black;
+  bottom: 0;
+  min-height: 93vh;
+  max-height: 93vh;
+  padding: 0;
+  margin: 0;
+}
+
+#feed ul{
+  list-style: none;
+  padding: 0;
+}
+
+.profile-pic{
+  margin: auto;
+  margin-top: 3vh;
+  margin-bottom: 3vh; 
+  display: block;
+  width: 12vw;
+  height: 12vw  ;
+}
+
+.name{
+  color: #ffffff;
+  margin: auto;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 2em;
+}
+
+.post{
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: auto;
+  margin-top: 2vh;
+  background-color: #f1eeee;
+  min-height: 30vh;
+  width: 60vw;
+  margin-bottom: 4vh;
+  position: relative;
+  border: 2px solid rgb(206, 204, 204);
+  border-radius: 5px;
+  max-width: 55vw;  
+}
+
+.post-info{
+  margin: 0 4.5vw;
+  font-size: 0.9em;
+  font-style: bold;
+  color: rgb(99, 99, 99);
+}
+
+b#date {
+  color: grey;
+  font-weight: 500;
+  font-size: 0.6em;
+}
+
+.post-name{
+  margin: 1vh 3vw;
+  font-size: 1.4em;
+  font-style: bold;
+  color: black;
+}
+
+hr {
+  border-top: 1px solid rgb(150, 150, 150);
+  height: 1px;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.post-text{
+  word-wrap: break-word;
+  overflow: hidden;
+  width: 100%;
+  margin: 1vh auto;
+  padding: 0 2vw;
+  max-height: 9vh;
+  font-size: 1em;
+  color: rgb(34, 34, 34);
+  bottom: 0;
+}
+
+.post-reactions{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+}
+
+.post-reactions div{
+  background-color: rgb(241, 163, 16);
+  color: white;
+  display: inline-block;
+  margin: auto;
+  height: 8vh;
+  width: 50%;
+  text-align: center;
+}
+
+div.accept {
+  border-right: 2px solid rgb(37, 37, 37);
+}
+
+.post-reactions div:hover{
+  cursor: pointer;
+}
+
+.accepted{
+  background-color: #06D85F !important;
+}
+
+.post-comment, .accept{
+  padding-top: 2.5vh;
+}
+.comment{
+  display: flex;
+  flex-direction: column;
+  min-height: 8vh;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: auto;
+  margin-top: 1vh;
+  background-color: #e0e0e0;
+  width: 60vw;
+}
+.comment-info{
+  margin: 0.25em;
+  font-size: 14px;
+  font-style: bold;
+  color: black;
+}
+
+.comment-text{
+  word-wrap: break-word;
+  margin-left: 0.25em;
+  font-size: 12px;
+  color: black;
+  bottom: 0;
+}
+
+#commform{
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: auto;
+  min-height: 2vh;
+  height: 5vh;
+  width: 100%;
+  max-width: 55vw;
+  margin-bottom: 6vh;
+  position: relative;
+}
+
+#comform button, #comform textarea{
+  display: inline-block;
+
+}
+
+button#commentb{
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  background-color: #ffa318;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  right: 0;
+}
+
+.buttona {
+  height: 100%;
+  padding-top: 2.5vh;
+
+}
+
+#commform textarea{
+  width: 89%;
+  height: 100%;
+}
+
+#postID{
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+a#help.button {
+  margin: 0;
+  width: 50%;
+}
+
+#help{
+  color: white;
+}
+
+
+/* ---------------------------POPUP NEW POST ------------------------------------ */
+
+#leave{
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  width: 2vw;
+  height: 2vw;
+  text-align: center;
+  background-color: red;
+  font-size: 110%;
+  color: white;
+  cursor: pointer;
+  padding-top: 1.5%;
+}
+
+.kick{
+  text-align: center;
+  background-color: red;
+  font-size: 100%;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.promote{
+  text-align: center;
+  background-color: green;
+  font-size: 100%;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.demote{
+  text-align: center;
+  background-color: orange;
+  font-size: 100%;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.kick p, .promote p, .demote p{
+  margin: auto;
+}
+
+.button {
+  background-color: rgb(224, 152, 17);
+  margin: auto;
+  width: 60%;
+  margin-bottom: 2vh;
+  display: block;
+  border: none;
+  color: white;
+  padding: 1vh 2vw;
+  border: 1px solid lightgray;
+  border-radius: 7%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease-out;
+}
+
+#new {
+  padding: 3vh 1vw;
+  margin: 4vh auto;
+}
+
+.button:hover {
+  color: #ffa318;
+  Background-color: #333;
+}
+
+.overlay {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+a#new, a#join, a#members, a#createevent, a#addevent {
+  font-size: 12px;
+}
+
+a#createevent, a#join {
+  scale: 0.7; 
+}
+
+p.bio {
+  text-align: center;
+}
+
+.popup {
+  display: flex;
+  max-height: 75vh;
+  flex-direction: column;
+  margin: 2vh auto;
+  padding: 2vh 2vw;
+  background: #fff;
+  border-radius: 5px;
+  width: fit-content;
+  position: relative;
+  transition: all 5s ease-in-out;
+  overflow-y: hidden;
+}
+
+.popup1 {
+  display: flex;
+  max-height: 75vh;
+  flex-direction: column;
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 40vw;
+  position: relative;
+  transition: all 5s ease-in-out;
+  overflow-y: scroll;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+    visibility:hidden;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 100%;
+}

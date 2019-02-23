@@ -1,0 +1,38 @@
+<div class="right" id="feed">
+    <ul>
+        <li v-for="post in feed" class="post">
+            <article class="post-content">
+                <p class="post-name">{{post.firstName}} {{post.lastName}}  ({{post.userName}}) <b id="date">{{post.date}}</b></p>
+                <hr>
+                <p class="post-info">Due Date: {{post.end}}</p>
+                <p class="post-text">{{post.content}}</p>
+            </article>
+            <br>
+            <section class="post-reactions">
+                <div onclick="accept(this.id);" v-bind:id="post.id" v-bind:class="[post.accepted != '' ? 'accepted' : '']" class="accept" >Accept Request</div><div v-bind:id="post.id" onclick="window.location.replace('/post/'+this.id);" class="post-comment">Comments</div>
+            </section>
+        </li>
+        <br>
+        <br>
+    </ul>
+</div>
+
+<div id="popup1" class="overlay">
+        <div class="popup">
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <form id="postform">
+                    <h2>Create a new Post</h2>
+                    <p>What do you need help with?</p>
+                    <br>
+                    <textarea required type="content" id="contentt" name="contentt" style="resize: none;" cols="40" rows="5" placeholder="Don't give unnecessary information    Doing so might compromise your safety"></textarea>
+                    <br>Due Date:
+                    <br>
+                    <input type="datetime-local" name="dato" id="dato">
+                    <br>
+                    <button type="button" class="btn btn-primary" id="newp"> SUBMIT </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    

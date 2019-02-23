@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/form.css" />
+    <title>Register</title>
+</head>
+
+<body>
+    <%- include('navform'); %>
+        <div id="registerdiv">
+            <img class="profile-pic circular--square" src="img/logo.jpg" />
+
+            <div id="form">
+                <form method="POST" action="/insertUser" id="register">
+                    <input type="text" name="username" id="username" placeholder="New username">
+                    <hr>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <hr>
+                    <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm your password">
+                    <hr>
+                    <input type="email" name="email" id="email" placeholder="name@example.com">
+                    <hr>
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name">
+                    <hr>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+                    <hr>
+                    <input type="date" type="text" name="birthday" id="birthday" placeholder="Birthday" onfocus="(this.type='date')" onblur="(this.type='text')">
+
+            </div>
+
+            <button class="enter" type="submit" id="rsubmit"> Register </button>
+            </form>
+        </div>
+
+        <div id="comboard">
+                <h1>Community Board</h1>
+                <br>
+                <p> a social network dedicated to bring together people living close to each other
+                     with the creation of communities, allowing users to form groups, to ask for help and to participate in events. </p>
+                </div>
+
+        <script src="/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+body {
+    font-family: 'Arial Narrow Bold', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+div.wrap {
+    max-height: 7vh;
+    min-width: 100vw;
+    height: 7vh;
+}
+
+#inserttodo {
+    width: 22vw;
+    height: fit-content;
+}
+
+form#todo {
+    text-align: left;
+    padding: 2vh 1vw;
+    margin: 0 3vw;
+    font-size: 16px;
+    width: fit-content;
+    float: left;
+    border: 2px solid lightgrey;
+    border-radius: 5%;
+    background-color: white;
+}
+
+li#event {
+    list-style: none;
+    margin: 0 3vw;
+    padding: 1vh 1vw;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+}
+
+input#description, input#date {
+    width: 18vw;
+    margin: 2vh auto;
+}
+
+input {
+    appearance: none;
+    padding: 1vh;
+    border: 0;
+    outline: none;
+    color: rgb(104, 104, 104)
+}
+
+h3 {
+    text-decoration: #333;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 3vh;
+}
+
+button#esubmit {
+    display: block;
+    width: 13vw;
+    font-size: 15px;
+    font-weight: 500;
+    border-style: none;
+    border-radius: 10px;
+    margin-top: 1vh;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2vh 0;
+    background-color: orange;
+    color: rgb(255, 255, 255);
+}
+
+.event-date {
+    color: rgb(116, 116, 116);
+    font-size: 18px;
+    margin-left: 6vw;
+}
+
+.event-info {
+    margin-left: 3vw;
+    color: rgb(66, 66, 66);
+}
+
+#events {
+    min-width: 68vw;
+    padding-right: 2vw;
+    height: 93vh;
+    float: right;    
+    overflow-y: scroll;
+}
+
+div#deletetodo {
+    position: relative;
+    float: right;
+    bottom: 2.4vh;
+    left: 1.1vw;
+    background-color: orange;
+    border: 2px solid orange;
+    border-radius: 10%;
+    padding-top: 0vh;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    width: 80%;
+    margin-top: 0;
+    margin-bottom: 3vh;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, rgb(187, 186, 186), #ccc);
+}
+hr#line {
+    display: block;
+    text-align: center;
+    margin-bottom: 4vh;
+    border: 0;
+    width: 70%;
+    height: 1.5px;
+    background: #333;
+    background-image: linear-gradient(to right, rgb(189, 189, 189), rgb(151, 151, 151), rgb(189, 189, 189));
+}

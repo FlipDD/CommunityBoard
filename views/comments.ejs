@@ -1,0 +1,85 @@
+<div class="right" id="feed">
+    <div class="post">
+        <article class="post-content">
+            <p class="post-name"><%= post.firstName+ ` `+ post.lastName + ` (` + post.userName + `)`%> <b id="date"><%= post.date %></b></p>
+            <hr>
+            <p class="post-info">  Due Date: <%= post.end %></p>
+            <p class="post-text"> <%= post.content %></p>
+        </article>
+        <br>
+        <section class="post-reactions">
+            <div onclick="accept(this.id);" id="<%= postId   %>" class="accept">Accept Request</div>
+            <% if(post.users_id == userId){ %>
+                <div onclick="location.href='#popup4';" class="buttona" style="bottom: 0;position: absolute;">Accepted List</div>
+                <% } %>
+        </section>
+        <br>
+    </div>
+
+
+    <div  id="commform">
+        <textarea required type="content" id="commentt" name="commentt" style="resize: none;" cols="40" rows="20" placeholder="Ask Something"></textarea>
+        <button type="button" class="btn btn-primary" id="commentb"> SUBMIT </button>
+        <input style="visibility:hidden;" type="text" name="postID" id="postID" value="<%- postId %>">
+    </div>
+    <ul>
+        <li v-for="comment in comments" class="comment">
+            <article class="comment-content">
+                <p class="comment-info">
+                    {{ comment.userName }} &nbsp; {{ comment.date }}
+                </p>
+                <!-- <p class="post-info">
+                    < % = post.userName+ ` `+ post.date % >
+                </p> -->
+                <p class="post-text">
+                    {{ comment.text }}
+                </p>
+            </article>
+        </li>
+    </ul>
+</div>
+
+
+<div id="popup4" class="overlay">
+    <div class="popup">
+        <a class="close" href="#">&times;</a>
+        <p>List of users that can help</p>
+        <table class="content table">
+            <tr>
+                <th style="width: 80%">User info</th>
+                <th style="width: 20%">Accept</th>
+            </tr>
+            <% for (let i = 0; i < accepts.length; i++) { %>
+                <% var element = accepts[i]; %>
+                <tr>
+                    <td>
+                        <%- element.firstName + " " + element.lastName +"<b> ("+ element.userName + ")</b>"%>
+                    </td>
+                    <td>
+                        <div onclick="choose(<%= postId + ', ' + element.users_id %>);">Choose user</div>
+                    </td>
+                </tr>
+            <% } %>
+        </table>
+    </div>
+</div>
+
+<div id="popup1" class="overlay">
+    <div class="popup">
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            <form method="POST" id="postform" action='/newp'>
+                <h2>Create a new Post</h2>
+                <p>What do you need help with?</p>
+                <br>
+                <textarea required type="content" id="content" name="content" style="resize: none;" cols="40" rows="5" placeholder="Don't give unnecessary information    Doing so might compromise your safety"></textarea>
+                <br>Due Date:
+                <br>
+                <input type="datetime-local" name="dato" id="dato">
+                <input style="visibility:hidden;" type="text" name="comID" id="comID" value="<%-community %>">
+                <br>
+                <button type="submit" class="btn btn-primary" id="submit"> SUBMIT </button>
+            </form>
+        </div>
+    </div>
+</div>
