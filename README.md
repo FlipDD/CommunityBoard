@@ -3,7 +3,7 @@
   Website developed using Node.js during the 2nd semester of the Games and Apps development course with another programmer.
 
 ## What I learned
-* HTML5
+* HTML5/Ejs
 * CSS
 * Javascript
 * Node.js
